@@ -3,22 +3,19 @@ package Dist::Zilla::Plugin::ConsistentVersionTest;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+use Test::ConsistentVersion;
 
 use Moose;
-use Test::ConsistentVersion;
 
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
-__PACKAGE__->meta->make_immutable;
-
 no Moose;
+
+__PACKAGE__->meta->make_immutable;
 
 1;
 
 # ABSTRACT: Adds a release test to ensure that all modules have the same $VERSION
-
-__END__
 
 =pod
 
