@@ -8,6 +8,27 @@ use Test::ConsistentVersion;
 use Moose;
 
 extends 'Dist::Zilla::Plugin::InlineFiles';
+with 'Dist::Zilla::Role::PrereqSource';
+
+=head1 METHODS
+
+=head2 register_prereqs
+
+Registers a 'develop' phase requirement for L<Test::ConsistentVersion> with the
+L<Dist::Zilla> object.
+
+=cut
+
+sub register_prereqs {
+    my $self = shift @_;
+
+    $self->zilla->register_prereqs(
+        { phase => 'develop' },
+        'Test::ConsistentVersion' => 0,
+    );
+
+    return;
+}
 
 no Moose;
 
