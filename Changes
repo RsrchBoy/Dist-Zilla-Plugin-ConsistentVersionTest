@@ -1,7 +1,13 @@
-0.02    2010-05-18
+Revision history for Dist-Zilla-Plugin-ConsistentVersionTest
 
-- Add missing prereq on Dist::Zilla
+{{$NEXT}}
+	* Add develop dep
+	* Switch maintainer from ROLSKY to RSRCHBOY; update dist.ini
+	* Refactor Changes into format maintainer's dzil bundle expects
+	* Make the "DONATIONS" section clear as to whom the donatee would be
+
+0.02    2010-05-18
+	* Add missing prereq on Dist::Zilla
 
 0.01    2010-05-17
-
-- Initial release
+	* Initial release
