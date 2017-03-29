@@ -32,18 +32,12 @@ following files
 
   xt/release/consistent-version.t
 
-=head1 SUPPORT
-
-Please report any bugs or feature requests to
-C<bug-dist-zilla-plugin-consistentversiontest@rt.cpan.org>, or through the web
-interface at L<http://rt.cpan.org>. I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
 =head1 DONATIONS
 
-If you'd like to thank me for the work I've done on this module, please
-consider making a "donation" to me via PayPal. I spend a lot of free time
-creating free software, and would appreciate any support you'd care to offer.
+If you'd like to thank me (the author, Dave Rolsky) for the work I've done on
+this module, please consider making a "donation" to me via PayPal. I spend a
+lot of free time creating free software, and would appreciate any support
+you'd care to offer.
 
 Please note that B<I am not suggesting that you must do this> in order for me
 to continue working on this particular software. I will continue to do so,
