@@ -1,3 +1,4 @@
+#!perl
 #
 # This file is part of Dist-Zilla-Plugin-ConsistentVersionTest
 #
@@ -6,13 +7,10 @@
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
-use strict;
-use warnings;
-package DZ1;
-# ABSTRACT: this is a sample package for testing Dist::Zilla;
 
-sub main {
-  return 1;
-}
+use Test::More;
 
-1;
+eval "use Test::HasVersion";
+plan skip_all => "Test::HasVersion required for testing version numbers"
+  if $@;
+all_pm_version_ok();

@@ -1,4 +1,15 @@
+#
+# This file is part of Dist-Zilla-Plugin-ConsistentVersionTest
+#
+# This software is copyright (c) 2010 by Dave Rolsky.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+#
 package Dist::Zilla::Plugin::ConsistentVersionTest;
+our $AUTHORITY = 'cpan:RSRCHBOY';
+# git description: 091ea5c
+$Dist::Zilla::Plugin::ConsistentVersionTest::VERSION = '0.03';
 
 use strict;
 use warnings;
@@ -10,14 +21,6 @@ use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 with 'Dist::Zilla::Role::PrereqSource';
 
-=head1 METHODS
-
-=head2 register_prereqs
-
-Registers a 'develop' phase requirement for L<Test::ConsistentVersion> with the
-L<Dist::Zilla> object.
-
-=cut
 
 sub register_prereqs {
     my $self = shift @_;
@@ -40,6 +43,18 @@ __PACKAGE__->meta->make_immutable;
 
 =pod
 
+=encoding UTF-8
+
+=for :stopwords Dave Rolsky Chris Weyl
+
+=head1 NAME
+
+Dist::Zilla::Plugin::ConsistentVersionTest - Adds a release test to ensure that all modules have the same $VERSION
+
+=head1 VERSION
+
+This document describes version 0.03 of Dist::Zilla::Plugin::ConsistentVersionTest - released April 01, 2017 as part of Dist-Zilla-Plugin-ConsistentVersionTest.
+
 =head1 SYNOPSIS
 
 In your F<dist.ini>:
@@ -52,6 +67,13 @@ This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
 following files
 
   xt/release/consistent-version.t
+
+=head1 METHODS
+
+=head2 register_prereqs
+
+Registers a 'develop' phase requirement for L<Test::ConsistentVersion> with the
+L<Dist::Zilla> object.
 
 =head1 DONATIONS
 
@@ -70,6 +92,32 @@ on free software full time, which seems unlikely at best.
 
 To donate, log into PayPal and send money to autarch@urth.org or use the
 button on this page: L<http://www.urth.org/~autarch/fs-donation.html>
+
+=head1 BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+L<https://github.com/RsrchBoy/Dist-Zilla-Plugin-ConsistentVersionTest/issues>
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
+=head1 AUTHOR
+
+Dave Rolsky <autarch@urth.org>
+
+=head1 CONTRIBUTOR
+
+=for stopwords Chris Weyl
+
+Chris Weyl <rsrchboy@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Dave Rolsky.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 
