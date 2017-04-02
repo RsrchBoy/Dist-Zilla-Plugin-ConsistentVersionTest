@@ -8,7 +8,7 @@ Dist::Zilla::Plugin::ConsistentVersionTest - Adds a release test to ensure that 
 
 # VERSION
 
-This document describes version 0.02\_02 of Dist::Zilla::Plugin::ConsistentVersionTest - released March 29, 2017 as part of Dist-Zilla-Plugin-ConsistentVersionTest.
+This document describes version 0.03 of Dist::Zilla::Plugin::ConsistentVersionTest - released April 01, 2017 as part of Dist-Zilla-Plugin-ConsistentVersionTest.
 
 # SYNOPSIS
 
@@ -22,6 +22,13 @@ This is an extension of [Dist::Zilla::Plugin::InlineFiles](https://metacpan.org/
 following files
 
     xt/release/consistent-version.t
+
+# METHODS
+
+## register\_prereqs
+
+Registers a 'develop' phase requirement for [Test::ConsistentVersion](https://metacpan.org/pod/Test::ConsistentVersion) with the
+[Dist::Zilla](https://metacpan.org/pod/Dist::Zilla) object.
 
 # DONATIONS
 
